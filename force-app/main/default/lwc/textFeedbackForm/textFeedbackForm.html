@@ -1,0 +1,11 @@
+<template>
+  <div if:true={errorMessage} class="builder-error">{errorMessage}</div>
+  <div class="wrapper">
+    <div if:true={questionLabel} class="label">{questionLabel}</div>
+    <div class="answer-wrapper">
+      <template for:each={answers} for:item="answer">
+        <a key={answer.value} href={answer.url}>{answer.label}</a>
+      </template>
+    </div>
+  </div>
+</template>

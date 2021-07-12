@@ -1,0 +1,28 @@
+.label {
+  font-size: x-large;
+  color: #54698d;
+}
+.answer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.answer-wrapper a {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  color: #54698d;
+  border: 1px solid #0176d3;
+  border-radius: 0.25rem;
+}
+.answer-wrapper a:hover {
+  color: #ffffff;
+  background-color: #0176d3;
+  border: 1px solid #014486;
+}
+.builder-error {
+  background-color: #FF0000;
+  color: #ffffff;
+  font-weight: bold;
+  padding: .5rem;
+}
