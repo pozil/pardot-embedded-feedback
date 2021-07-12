@@ -8,9 +8,9 @@
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\""
   },
   "devDependencies": {
-    "@prettier/plugin-xml": "^0.12.0",
-    "prettier": "^2.0.5",
-    "prettier-plugin-apex": "^1.6.0"
+    "@prettier/plugin-xml": "^0.13.1",
+    "prettier": "^2.3.2",
+    "prettier-plugin-apex": "^1.10.0"
   },
   "husky": {
     "hooks": {
