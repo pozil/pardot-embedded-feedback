@@ -9,35 +9,35 @@
     <targetConfigs>
         <targetConfig targets="lightningStatic__Email">
             <property
-                name="formUrl"
-                type="String"
-                label="Form URL"
-                description="Custom Form Handler URL where form data will be sent."
-                required="true"
-                default="https://todo"
-            />
+        name="formUrl"
+        type="String"
+        label="Form URL"
+        description="Custom Form Handler URL where form data will be sent."
+        required="true"
+        default="https://todo"
+      />
             <property
-                name="recipientEmail"
-                type="String"
-                label="Recipient Email"
-                description="Email used to match with a prospect record."
-                required="true"
-                default="{{Recipient.Email}}"
-            />
+        name="recipientEmail"
+        type="String"
+        label="Recipient Email"
+        description="Email used to match with a prospect record."
+        required="true"
+        default="{{Recipient.Email}}"
+      />
             <property
-                name="questionLabel"
-                type="String"
-                label="Question Label"
-                default="Give us some feedback"
-            />
+        name="questionLabel"
+        type="String"
+        label="Question Label"
+        default="Give us some feedback"
+      />
             <property
-                name="prospectFieldName"
-                type="String"
-                label="Prospect Field Name"
-                description="Prospect field in which the answer will be saved."
-                required="true"
-                default="Rating"
-            />
+        name="prospectFieldName"
+        type="String"
+        label="Prospect Field Name"
+        description="Prospect field in which the answer will be saved."
+        required="true"
+        default="rating"
+      />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

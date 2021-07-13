@@ -9,7 +9,7 @@ export default class TextFeedbackForm extends LightningElement {
   questionLabel;
   @api
   prospectFieldName;
-  
+
   // Answer 1
   @api
   get answer1Label() {
@@ -110,11 +110,9 @@ export default class TextFeedbackForm extends LightningElement {
       const value = this[`_answer${i}Value`];
       if (!label && value) {
         this.errorMessage = `Missing label for answer ${i}`;
-      }
-      else if (label && !value) {
+      } else if (label && !value) {
         this.errorMessage = `Missing value for answer ${i}`;
-      }
-      else if (label && value) {
+      } else if (label && value) {
         const url = `${baseUrl}${encodeURIComponent(value)}`;
         answers.push({
           label,

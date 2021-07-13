@@ -1,80 +1,30 @@
 <template>
   <h1>{questionLabel}</h1>
   <div class="rating-inputs">
-      <form action={formUrl} method="post">
-          <input
-              type="text"
-              name={prospectFieldName}
-              value="5"
-              class="hidden"
-          />
-          <input
-              type="text"
-              name="email"
-              value={recipientEmail}
-              class="hidden"
-          />
-          <input type="submit" value="★"/>
-      </form>
-      <form action={formUrl} method="post">
-          <input
-              type="text"
-              name={prospectFieldName}
-              value="4"
-              class="hidden"
-          />
-          <input
-              type="text"
-              name="email"
-              value={recipientEmail}
-              class="hidden"
-          />
-          <input type="submit" value="★"/>
-      </form>
-      <form action={formUrl} method="post">
-          <input
-              type="text"
-              name={prospectFieldName}
-              value="3"
-              class="hidden"
-          />
-          <input
-              type="text"
-              name="email"
-              value={recipientEmail}
-              class="hidden"
-          />
-          <input type="submit" value="★"/>
-      </form>
-      <form action={formUrl} method="post">
-          <input
-              type="text"
-              name={prospectFieldName}
-              value="2"
-              class="hidden"
-          />
-          <input
-              type="text"
-              name="email"
-              value={recipientEmail}
-              class="hidden"
-          />
-          <input type="submit" value="★"/>
-      </form>
-      <form action={formUrl} method="post">
-          <input
-              type="text"
-              name={prospectFieldName}
-              value="1"
-              class="hidden"
-          />
-          <input
-              type="text"
-              name="email"
-              value={recipientEmail}
-              class="hidden"
-          />
-          <input type="submit" value="★"/>
-      </form>
+    <form action={formUrl} method="post">
+      <input type="text" name={prospectFieldName} value="5" class="hidden" />
+      <input type="text" name="email" value={recipientEmail} class="hidden" />
+      <input type="submit" value="★" />
+    </form>
+    <form action={formUrl} method="post">
+      <input type="text" name={prospectFieldName} value="4" class="hidden" />
+      <input type="text" name="email" value={recipientEmail} class="hidden" />
+      <input type="submit" value="★" />
+    </form>
+    <form action={formUrl} method="post">
+      <input type="text" name={prospectFieldName} value="3" class="hidden" />
+      <input type="text" name="email" value={recipientEmail} class="hidden" />
+      <input type="submit" value="★" />
+    </form>
+    <form action={formUrl} method="post">
+      <input type="text" name={prospectFieldName} value="2" class="hidden" />
+      <input type="text" name="email" value={recipientEmail} class="hidden" />
+      <input type="submit" value="★" />
+    </form>
+    <form action={formUrl} method="post">
+      <input type="text" name={prospectFieldName} value="1" class="hidden" />
+      <input type="text" name="email" value={recipientEmail} class="hidden" />
+      <input type="submit" value="★" />
+    </form>
   </div>
 </template>
