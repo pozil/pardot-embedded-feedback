@@ -1,5 +1,9 @@
+.wrapper {
+  margin: 1rem 0;
+}
 .label {
   font-size: x-large;
+  margin-bottom: 0.5rem;
   color: #54698d;
 }
 .answer-wrapper {
