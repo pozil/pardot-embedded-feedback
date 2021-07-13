@@ -24,7 +24,6 @@ export default class RatingFeedbackForm extends LightningElement {
   generateStars() {
     const stars = [];
     const baseUrl = `${this.formUrl}?email=${this.recipientEmail}&${this.prospectFieldName}=`;
-    console.log(baseUrl);
     for (let i = this._starCount; i > 0; i--) {
       const url = `${baseUrl}${i}`;
       stars.push({
