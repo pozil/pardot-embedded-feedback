@@ -38,6 +38,14 @@
         required="true"
         default="rating"
       />
+      <property
+        name="starCount"
+        type="Integer"
+        label="Star Count"
+        description="Number of stars available for rating."
+        required="true"
+        default="5"
+      />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

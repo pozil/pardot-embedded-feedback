@@ -1,30 +1,12 @@
 <template>
-  <h1>{questionLabel}</h1>
-  <div class="rating-inputs">
-    <form action={formUrl} method="post">
-      <input type="text" name={prospectFieldName} value="5" class="hidden" />
-      <input type="text" name="email" value={recipientEmail} class="hidden" />
-      <input type="submit" value="★" />
-    </form>
-    <form action={formUrl} method="post">
-      <input type="text" name={prospectFieldName} value="4" class="hidden" />
-      <input type="text" name="email" value={recipientEmail} class="hidden" />
-      <input type="submit" value="★" />
-    </form>
-    <form action={formUrl} method="post">
-      <input type="text" name={prospectFieldName} value="3" class="hidden" />
-      <input type="text" name="email" value={recipientEmail} class="hidden" />
-      <input type="submit" value="★" />
-    </form>
-    <form action={formUrl} method="post">
-      <input type="text" name={prospectFieldName} value="2" class="hidden" />
-      <input type="text" name="email" value={recipientEmail} class="hidden" />
-      <input type="submit" value="★" />
-    </form>
-    <form action={formUrl} method="post">
-      <input type="text" name={prospectFieldName} value="1" class="hidden" />
-      <input type="text" name="email" value={recipientEmail} class="hidden" />
-      <input type="submit" value="★" />
-    </form>
+  <div class="wrapper">
+    <div if:true={questionLabel} class="label">{questionLabel}</div>
+    <div class="stars-outer-wrapper">
+      <div class="stars-inner-wrapper">
+        <template for:each={stars} for:item="star">
+          <a key={star.url} href={star.url} title={star.value}>★</a>
+        </template>
+      </div>
+    </div>
   </div>
 </template>
