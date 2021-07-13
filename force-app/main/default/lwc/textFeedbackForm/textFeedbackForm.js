@@ -102,7 +102,7 @@ export default class TextFeedbackForm extends LightningElement {
   generateAnswers() {
     this.errorMessage = undefined;
     const answers = [];
-    const email = encodeURIComponent(this.recipientEmail);
+    const email = this.recipientEmail;
     const fieldName = this.prospectFieldName;
     const baseUrl = `${this.formUrl}?email=${email}&${fieldName}=`;
     for (let i = 1; i < 6; i++) {
