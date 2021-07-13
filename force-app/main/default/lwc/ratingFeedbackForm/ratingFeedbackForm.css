@@ -9,10 +9,10 @@
 .rating-inputs {
   display: flex;
   direction: rtl;
-  float:left;
+  float: left;
 }
 input {
-  background:none;
+  background: none;
   height: 50px;
   width: 50px;
   border: 5px solid #fff;
@@ -26,5 +26,5 @@ form:hover input {
 }
 
 form:hover ~ form input {
-  color:black;
+  color: black;
 }
