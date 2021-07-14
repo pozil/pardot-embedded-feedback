@@ -1,15 +1,45 @@
 import { LightningElement, api } from "lwc";
 
 export default class TextFeedbackForm extends LightningElement {
+  answers = [];
+  errorMessage;
+
   @api
-  formUrl;
+  get formUrl() {
+    return this._formUrl;
+  }
+  set formUrl(value) {
+    this._formUrl = value;
+    this.generateAnswers();
+  }
+
   @api
-  recipientEmail;
+  get recipientEmail() {
+    return this._recipientEmail;
+  }
+  set recipientEmail(value) {
+    this._recipientEmail = value;
+    this.generateAnswers();
+  }
+
   @api
-  questionLabel;
+  get questionLabel() {
+    return this._questionLabel;
+  }
+  set questionLabel(value) {
+    this._questionLabel = value;
+    this.generateAnswers();
+  }
+
   @api
-  prospectFieldName;
-  
+  get prospectFieldName() {
+    return this._prospectFieldName;
+  }
+  set prospectFieldName(value) {
+    this._prospectFieldName = value;
+    this.generateAnswers();
+  }
+
   // Answer 1
   @api
   get answer1Label() {
@@ -96,25 +126,18 @@ export default class TextFeedbackForm extends LightningElement {
     this.generateAnswers();
   }
 
-  answers = [];
-  errorMessage;
-
   generateAnswers() {
     this.errorMessage = undefined;
     const answers = [];
-    const email = this.recipientEmail;
-    const fieldName = this.prospectFieldName;
-    const baseUrl = `${this.formUrl}?email=${email}&${fieldName}=`;
+    const baseUrl = `${this.formUrl}?email=${this.recipientEmail}&${this.prospectFieldName}=`;
     for (let i = 1; i < 6; i++) {
       const label = this[`_answer${i}Label`];
       const value = this[`_answer${i}Value`];
       if (!label && value) {
         this.errorMessage = `Missing label for answer ${i}`;
-      }
-      else if (label && !value) {
+      } else if (label && !value) {
         this.errorMessage = `Missing value for answer ${i}`;
-      }
-      else if (label && value) {
+      } else if (label && value) {
         const url = `${baseUrl}${encodeURIComponent(value)}`;
         answers.push({
           label,

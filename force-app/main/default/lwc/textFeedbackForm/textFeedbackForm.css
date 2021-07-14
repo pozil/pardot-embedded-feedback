@@ -26,8 +26,8 @@
   border: 1px solid #014486;
 }
 .builder-error {
-  background-color: #FF0000;
+  background-color: #ff0000;
   color: #ffffff;
   font-weight: bold;
-  padding: .5rem;
+  padding: 0.5rem;
 }
