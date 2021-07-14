@@ -61,4 +61,8 @@ export default class RatingFeedbackForm extends LightningElement {
     }
     this.stars = stars;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 22ecf795b34606cfba375b97f90c9fd38e3d28cd

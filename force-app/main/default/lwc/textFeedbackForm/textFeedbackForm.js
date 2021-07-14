@@ -32,6 +32,7 @@ export default class TextFeedbackForm extends LightningElement {
   }
 
   @api
+<<<<<<< HEAD
   get prospectFieldName() {
     return this._prospectFieldName;
   }
@@ -39,6 +40,9 @@ export default class TextFeedbackForm extends LightningElement {
     this._prospectFieldName = value;
     this.generateAnswers();
   }
+=======
+  prospectFieldName;
+>>>>>>> 22ecf795b34606cfba375b97f90c9fd38e3d28cd
 
   // Answer 1
   @api
