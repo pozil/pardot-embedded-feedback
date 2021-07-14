@@ -23,7 +23,6 @@
   color: #0176d3;
   text-decoration: none;
   border: 1px solid transparent;
-<<<<<<< HEAD
 }
 .stars-inner-wrapper a:hover {
   color: #ffffff;
@@ -31,12 +30,3 @@
   border-radius: 2rem;
   background-color: #0176d3;
 }
-=======
-}
-.stars-inner-wrapper a:hover {
-  color: #ffffff;
-  border: 1px solid #014486;
-  border-radius: 2rem;
-  background-color: #0176d3;
-}
->>>>>>> 22ecf795b34606cfba375b97f90c9fd38e3d28cd

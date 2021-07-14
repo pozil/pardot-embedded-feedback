@@ -8,52 +8,44 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightningStatic__Email">
-<<<<<<< HEAD
-            <property name="formUrl" type="String" label="Form URL" description="Custom Form Handler URL where form data will be sent." required="true" default="https://todo"/>
-            <property name="recipientEmail" type="String" label="Recipient Email" description="Email used to match with a prospect record." required="true" default="{{Recipient.Email}}"/>
-            <property name="questionLabel" type="String" label="Question Label" default="Give us some feedback"/>
-            <property name="prospectFieldName" type="String" label="Prospect Field Name" description="Prospect field in which the answer will be saved." required="true" default="Rating"/>
-            <property name="starCount" type="Integer" label="Star Count" description="Number of stars available for rating." required="true" default="5"/>
-=======
             <property
-        name="formUrl"
-        type="String"
-        label="Form URL"
-        description="Custom Form Handler URL where form data will be sent."
-        required="true"
-        default="https://todo"
-      />
+                name="formUrl"
+                type="String"
+                label="Form URL"
+                description="Custom Form Handler URL where form data will be sent."
+                required="true"
+                default="https://todo"
+            />
+                    <property
+                name="recipientEmail"
+                type="String"
+                label="Recipient Email"
+                description="Email used to match with a prospect record."
+                required="true"
+                default="{{Recipient.Email}}"
+            />
+                    <property
+                name="questionLabel"
+                type="String"
+                label="Question Label"
+                default="Give us some feedback"
+            />
+                    <property
+                name="prospectFieldName"
+                type="String"
+                label="Prospect Field Name"
+                description="Prospect field in which the answer will be saved."
+                required="true"
+                default="rating"
+            />
             <property
-        name="recipientEmail"
-        type="String"
-        label="Recipient Email"
-        description="Email used to match with a prospect record."
-        required="true"
-        default="{{Recipient.Email}}"
-      />
-            <property
-        name="questionLabel"
-        type="String"
-        label="Question Label"
-        default="Give us some feedback"
-      />
-            <property
-        name="prospectFieldName"
-        type="String"
-        label="Prospect Field Name"
-        description="Prospect field in which the answer will be saved."
-        required="true"
-        default="rating"
-      />
-      <property
-        name="starCount"
-        type="Integer"
-        label="Star Count"
-        description="Number of stars available for rating."
-        required="true"
-        default="5"
-      />
->>>>>>> 22ecf795b34606cfba375b97f90c9fd38e3d28cd
+                name="starCount"
+                type="Integer"
+                label="Star Count"
+                description="Number of stars available for rating."
+                required="true"
+                default="5"
+            />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
