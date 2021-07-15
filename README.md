@@ -24,12 +24,14 @@ Gather instant feedback from prospects within Pardot Emails.
 
 Embed a feedback form within your Pardot emails to gather instant and direct feedback from your prospects. Ask them about their interests or understand if they like your content (webinar, whitepaper).
 
-The repository contains Lightning Web Components that can be used with Pardot's Email Builder:
+This project contains Lightning Web Components that can be used with Pardot's Email Builder:
 
 - a **Star Rating** component with any number of stars (default: 5).
 - a **Text Feedback** component with up to 5 text field options.
 
-Once sent, prospects can then select and submit his answer directly from within the email.
+Once the email is sent, prospects can then select and submit their answers directly from within the email. Answers are sent to a Pardot Form Handler that saves responses in a Prospect field and optionally triggers some admin-defined actions (re-scoring...).
+
+![Architecture](gfx/architecture.jpg)
 
 ## Installation
 
