@@ -12,7 +12,6 @@
 }
 .stars-inner-wrapper {
   display: inline-block;
-  direction: rtl;
 }
 .stars-inner-wrapper a {
   display: inline-block;

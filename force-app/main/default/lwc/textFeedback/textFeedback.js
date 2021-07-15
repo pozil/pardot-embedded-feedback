@@ -1,6 +1,6 @@
 import { LightningElement, api } from "lwc";
 
-export default class TextFeedbackForm extends LightningElement {
+export default class TextFeedback extends LightningElement {
   answers = [];
   errorMessage;
 
@@ -32,11 +32,11 @@ export default class TextFeedbackForm extends LightningElement {
   }
 
   @api
-  get prospectFieldName() {
-    return this._prospectFieldName;
+  get formFieldName() {
+    return this._formFieldName;
   }
-  set prospectFieldName(value) {
-    this._prospectFieldName = value;
+  set formFieldName(value) {
+    this._formFieldName = value;
     this.generateAnswers();
   }
 
@@ -129,7 +129,7 @@ export default class TextFeedbackForm extends LightningElement {
   generateAnswers() {
     this.errorMessage = undefined;
     const answers = [];
-    const baseUrl = `${this.formUrl}?email=${this.recipientEmail}&${this.prospectFieldName}=`;
+    const baseUrl = `${this.formUrl}?email=${this.recipientEmail}&${this.formFieldName}=`;
     for (let i = 1; i < 6; i++) {
       const label = this[`_answer${i}Label`];
       const value = this[`_answer${i}Value`];

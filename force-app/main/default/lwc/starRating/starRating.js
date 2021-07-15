@@ -1,6 +1,6 @@
 import { LightningElement, api } from "lwc";
 
-export default class RatingFeedbackForm extends LightningElement {
+export default class StarRating extends LightningElement {
   stars = [];
 
   @api
@@ -31,11 +31,11 @@ export default class RatingFeedbackForm extends LightningElement {
   }
 
   @api
-  get prospectFieldName() {
-    return this._prospectFieldName;
+  get formFieldName() {
+    return this._formFieldName;
   }
-  set prospectFieldName(value) {
-    this._prospectFieldName = value;
+  set formFieldName(value) {
+    this._formFieldName = value;
     this.generateStars();
   }
 
@@ -50,9 +50,9 @@ export default class RatingFeedbackForm extends LightningElement {
 
   generateStars() {
     const stars = [];
-    const baseUrl = `${this.formUrl}?email=${this.recipientEmail}&${this.prospectFieldName}=`;
+    const baseUrl = `${this.formUrl}?email=${this.recipientEmail}&${this.formFieldName}=`;
 
-    for (let i = this._starCount; i > 0; i--) {
+    for (let i = 1; i < this._starCount + 1; i++) {
       const url = `${baseUrl}${i}`;
       stars.push({
         url,

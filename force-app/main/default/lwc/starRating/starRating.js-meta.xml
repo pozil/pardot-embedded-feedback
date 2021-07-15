@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Star Rating</masterLabel>
+    <targets>
+        <target>lightningStatic__Email</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningStatic__Email">
+            <property
+        name="formUrl"
+        type="String"
+        label="Form URL"
+        description="Custom Form Handler URL where form data will be sent."
+        required="true"
+        default="https://todo"
+      />
+                    <property
+        name="recipientEmail"
+        type="String"
+        label="Recipient Email"
+        description="Email used to match with a prospect record."
+        required="true"
+        default="{{Recipient.Email}}"
+      />
+                    <property
+        name="questionLabel"
+        type="String"
+        label="Question Label"
+        default="Give us some feedback"
+      />
+                    <property
+        name="formFieldName"
+        type="String"
+        label="Form Field Name"
+        description="Name of the field in which the rating value will be sent."
+        required="true"
+        default="rating"
+      />
+            <property
+        name="starCount"
+        type="Integer"
+        label="Star Count"
+        description="Number of stars available for rating."
+        required="true"
+        default="5"
+      />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
