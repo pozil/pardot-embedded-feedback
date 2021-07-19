@@ -54,7 +54,7 @@ Install the components though the AppExchange (recommended) or deploy this proje
 
 1. Create an **Email Content** record.
 1. In your Email Content record, click **Edit in Builder**.
-1. Expand the **Custom** components section on the left and drag and drop one of the feedback form components on your email template.
+1. Expand the **Custom - Managed** components section on the left and drag and drop one of the feedback form components on your email template.
 1. Refer to the [Component Reference](#component-reference) section of this document configuration guidance.
 
 ## Component Reference
