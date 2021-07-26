@@ -38,7 +38,8 @@
         required="true"
         default="feedback"
       />
-            <!-- Answer 1 --><property
+            <!-- Answer 1 -->
+            <property
         name="answer1Label"
         type="String"
         label="Answer 1 Label"
@@ -52,7 +53,8 @@
         required="true"
         default="no"
       />
-            <!-- Answer 2 --><property
+            <!-- Answer 2 -->
+            <property
         name="answer2Label"
         type="String"
         label="Answer 2 Label"
@@ -64,7 +66,8 @@
         label="Answer 2 Value"
         default="maybe"
       />
-            <!-- Answer 3 --><property
+            <!-- Answer 3 -->
+            <property
         name="answer3Label"
         type="String"
         label="Answer 3 Label"
@@ -76,7 +79,8 @@
         label="Answer 3 Value"
         default="yes"
       />
-            <!-- Answer 4 --><property
+            <!-- Answer 4 -->
+            <property
         name="answer4Label"
         type="String"
         label="Answer 4 Label"
@@ -86,16 +90,76 @@
         type="String"
         label="Answer 4 Value"
       />
-            <!-- Answer 5 --><property
+      <!-- Answer 5 -->
+      <property
         name="answer5Label"
         type="String"
         label="Answer 5 Label"
         required="false"
       />
-            <property
-        name="answer5Value"
+      <property name="answer5Value" type="String" label="Answer 5 Value" />
+      <!-- Label Style -->
+      <property
+        name="labelAlignment"
+        label="Label Alignment"
         type="String"
-        label="Answer 5 Value"
+        datasource="left,center,right"
+        required="true"
+        default="left"
+      />
+      <property
+        name="labelColor"
+        type="Color"
+        label="Label Color"
+        required="true"
+        default="#014486"
+      />
+      <!-- Button Base Style -->
+      <property
+        name="buttonColor"
+        type="Color"
+        label="Button Text Color"
+        required="true"
+        default="#54698d"
+      />
+      <property
+        name="buttonBgColor"
+        type="Color"
+        label="Button Background Color"
+        required="true"
+        default="#FFFFFF"
+      />
+      <property
+        name="buttonBorderColor"
+        type="Color"
+        label="Button Border Color"
+        required="true"
+        default="#0176d3"
+      />
+      <!-- Button Hover Style -->
+      <property
+        name="buttonHoverColor"
+        type="Color"
+        label="Button Hover Text Color"
+        description="Previewed unavailable in Email Builder (hover disabled), use the email template preview."
+        required="true"
+        default="#FFFFFF"
+      />
+      <property
+        name="buttonHoverBgColor"
+        type="Color"
+        label="Button Hover Background Color"
+        description="Previewed unavailable in Email Builder (hover disabled), use the email template preview."
+        required="true"
+        default="#0176d3"
+      />
+      <property
+        name="buttonHoverBorderColor"
+        type="Color"
+        label="Button Hover Border Color"
+        description="Previewed unavailable in Email Builder (hover disabled), use the email template preview."
+        required="true"
+        default="#014486"
       />
         </targetConfig>
     </targetConfigs>

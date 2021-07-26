@@ -37,9 +37,9 @@ Once the email is sent, prospects can then select and submit their answers direc
 
 Before installing, check for these prerequisites:
 
-* You must be a Salesforce Administrator
-* You must be a Pardot Administrator
-* The Pardot setup must be completed and the connector with Salesforce active
+- You must be a Salesforce Administrator
+- You must be a Pardot Administrator
+- The Pardot setup must be completed and the connector with Salesforce active
 
 Install the components though the AppExchange (recommended) or deploy this project's metadata (for development purposes).
 
@@ -62,6 +62,7 @@ Create a [Form Handler](https://help.salesforce.com/articleView?id=sf.pardot_for
 1. Check **Kiosk/Data Entry Mode**
 1. Specify a URL for the **Success Location**. This is a URL that should leads to a landing page that says "Thank You".
 1. Add a **Form Field** mapping:
+
    - **External Field Name** is the name of the field that will be specified in your component later.
    - **Prospect Field** is the field where the information will be saved.
    - **Data Format** can be left as `Text` or optionally switched to `Number` if using the star rating component.
@@ -87,13 +88,18 @@ Create a [Form Handler](https://help.salesforce.com/articleView?id=sf.pardot_for
 </details>
 <br/>
 
-| Property            | Description                                                                                                                                       |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Form URL**        | HTTPS endpoint URL of your Form Handler that you copied earlier.                                                                                  |
-| **Recipient Email** | Email address of the prospect.<br/>Leave the default value `{{Recipient.Email}}`, Pardot will automatically inject the relevant values in emails. |
-| **Question Label**  | An optional label for the component.                                                                                                              |
-| **Form Field Name** | This value must match the **External Field Name** value that you configured in your Form Handler.                                                 |
-| **Star Count**      | The number of stars that will be displayed in the email.                                                                                          |
+| Property                        | Description                                                                                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Form URL**                    | HTTPS endpoint URL of your Form Handler that you copied earlier.                                                                                  |
+| **Recipient Email**             | Email address of the prospect.<br/>Leave the default value `{{Recipient.Email}}`, Pardot will automatically inject the relevant values in emails. |
+| **Question Label**              | An optional label for the component.                                                                                                              |
+| **Form Field Name**             | This value must match the **External Field Name** value that you configured in your Form Handler.                                                 |
+| **Star Count**                  | The number of stars that will be displayed in the email.                                                                                          |
+| **Label Alignment**             | Horizontal alignment of the label: left, center or right.                                                                                         |
+| **Label Color**                 | Font color for label.                                                                                                                             |
+| **Star Color**                  | Default star fill color.                                                                                                                          |
+| **Star Hover Color**            | Star fill color when user hovers with cursor. Previewed unavailable in Email Builder (hover disabled), use the email template preview.            |
+| **Star Hover Background Color** | Star background color when user hovers with cursor. Previewed unavailable in Email Builder (hover disabled), use the email template preview.      |
 
 ### Text Feedback Component
 
@@ -110,11 +116,19 @@ Create a [Form Handler](https://help.salesforce.com/articleView?id=sf.pardot_for
 - The component supports up to five answers.
 - Answers with no label and values will not be displayed
 
-| Property            | Description                                                                                                                                       |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Form URL**        | HTTPS endpoint URL of your Form Handler that you copied earlier.                                                                                  |
-| **Recipient Email** | Email address of the prospect.<br/>Leave the default value `{{Recipient.Email}}`, Pardot will automatically inject the relevant values in emails. |
-| **Question Label**  | An optional label for the component.                                                                                                              |
-| **Form Field Name** | This value must match the **External Field Name** value that you configured in your Form Handler.                                                 |
-| **Answer x Label**  | Label for one of the x links displayed in the email.                                                                                              |
-| **Answer x Value**  | Value associated to one of the x links displayed in the email. This is what gets sent to the form handler.                                        |
+| Property                          | Description                                                                                                                                       |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Form URL**                      | HTTPS endpoint URL of your Form Handler that you copied earlier.                                                                                  |
+| **Recipient Email**               | Email address of the prospect.<br/>Leave the default value `{{Recipient.Email}}`, Pardot will automatically inject the relevant values in emails. |
+| **Question Label**                | An optional label for the component.                                                                                                              |
+| **Form Field Name**               | This value must match the **External Field Name** value that you configured in your Form Handler.                                                 |
+| **Answer x Label**                | Label for one of the x links displayed in the email.                                                                                              |
+| **Answer x Value**                | Value associated to one of the x links displayed in the email. This is what gets sent to the form handler.                                        |
+| **Label Alignment**               | Horizontal alignment of the label: left, center or right.                                                                                         |
+| **Label Color**                   | Font color for label.                                                                                                                             |
+| **Button Text Color**             | Default button text color.                                                                                                                        |
+| **Button Background Color**       | Default button background color.                                                                                                                  |
+| **Button Border Color**           | Default button border color.                                                                                                                      |
+| **Button Hover Text Color**       | Button text color when user hovers with cursor. Previewed unavailable in Email Builder (hover disabled), use the email template preview.          |
+| **Button Hover Background Color** | Button background color when user hovers with cursor. Previewed unavailable in Email Builder (hover disabled), use the email template preview.    |
+| **Button Hover Border Color**     | Button border color when user hovers with cursor. Previewed unavailable in Email Builder (hover disabled), use the email template preview.        |

@@ -4,6 +4,15 @@ export default class TextFeedback extends LightningElement {
   answers = [];
   errorMessage;
 
+  @api labelAlignment;
+  @api labelColor;
+  @api buttonColor;
+  @api buttonBgColor;
+  @api buttonBorderColor;
+  @api buttonHoverColor;
+  @api buttonHoverBgColor;
+  @api buttonHoverBorderColor;
+
   @api
   get formUrl() {
     return this._formUrl;
@@ -147,5 +156,17 @@ export default class TextFeedback extends LightningElement {
       }
     }
     this.answers = answers;
+  }
+
+  get labelStyle() {
+    return `color: ${this.labelColor}; text-align: ${this.labelAlignment};`;
+  }
+
+  get buttonBaseStyle() {
+    return `color: ${this.buttonColor}; background-color: ${this.buttonBgColor}; border-color: ${this.buttonBorderColor};`;
+  }
+
+  get buttonHoverStyle() {
+    return `color: ${this.buttonHoverColor}; background-color: ${this.buttonHoverBgColor}; border-color: ${this.buttonHoverBorderColor};`;
   }
 }

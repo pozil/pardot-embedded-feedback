@@ -4,7 +4,6 @@
 .label {
   font-size: x-large;
   margin-bottom: 0.5rem;
-  color: #54698d;
 }
 .answer-wrapper {
   display: flex;
@@ -12,18 +11,23 @@
   flex-wrap: wrap;
 }
 .answer-wrapper a {
-  padding: 0.5rem;
-  margin: 0.5rem;
   text-decoration: none;
+  margin: 0.5rem;
+}
+.answer-wrapper a span {
+  padding: 0.5rem;
   white-space: nowrap;
-  color: #54698d;
-  border: 1px solid #0176d3;
+  border: 1px solid;
   border-radius: 0.25rem;
 }
-.answer-wrapper a:hover {
-  color: #ffffff;
-  background-color: #0176d3;
-  border: 1px solid #014486;
+.answer-wrapper a span.hover {
+  display: none;
+}
+.answer-wrapper a:hover span.base {
+  display: none;
+}
+.answer-wrapper a:hover span.hover {
+  display: inline;
 }
 .builder-error {
   background-color: #ff0000;
