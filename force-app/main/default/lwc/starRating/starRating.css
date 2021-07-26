@@ -4,7 +4,6 @@
 .label {
   font-size: x-large;
   margin-bottom: 0.5rem;
-  color: #54698d;
 }
 .stars-outer-wrapper {
   margin: auto;
@@ -15,17 +14,21 @@
 }
 .stars-inner-wrapper a {
   display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.stars-inner-wrapper span {
+  display: inline-block;
   height: 50px;
   width: 50px;
-  font-size: 2rem;
-  text-align: center;
-  color: #0176d3;
-  text-decoration: none;
-  border: 1px solid transparent;
 }
-.stars-inner-wrapper a:hover {
-  color: #ffffff;
-  border: 1px solid #014486;
+.stars-inner-wrapper a span.hover {
   border-radius: 2rem;
-  background-color: #0176d3;
+  display: none;
+}
+.stars-inner-wrapper a:hover span.base {
+  display: none;
+}
+.stars-inner-wrapper a:hover span.hover {
+  display: inline-block;
 }

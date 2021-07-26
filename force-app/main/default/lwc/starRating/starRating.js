@@ -3,6 +3,12 @@ import { LightningElement, api } from "lwc";
 export default class StarRating extends LightningElement {
   stars = [];
 
+  @api labelAlignment;
+  @api labelColor;
+  @api starColor;
+  @api starHoverColor;
+  @api starHoverBgColor;
+
   @api
   get formUrl() {
     return this._formUrl;
@@ -60,5 +66,17 @@ export default class StarRating extends LightningElement {
       });
     }
     this.stars = stars;
+  }
+
+  get labelStyle() {
+    return `color: ${this.labelColor}; text-align: ${this.labelAlignment};`;
+  }
+
+  get starBaseStyle() {
+    return `color: ${this.starColor};`;
+  }
+
+  get starHoverStyle() {
+    return `color: ${this.starHoverColor}; background-color: ${this.starHoverBgColor};`;
   }
 }

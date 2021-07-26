@@ -1,10 +1,15 @@
 <template>
   <div class="wrapper">
-    <div if:true={questionLabel} class="label">{questionLabel}</div>
+    <div if:true={questionLabel} class="label" style={labelStyle}>
+      {questionLabel}
+    </div>
     <div class="stars-outer-wrapper">
       <div class="stars-inner-wrapper">
         <template for:each={stars} for:item="star">
-          <a key={star.url} href={star.url} title={star.value}>★</a>
+          <a key={star.url} href={star.url} title={star.value}>
+            <span class="base" style={starBaseStyle}>★</span>
+            <span class="hover" style={starHoverStyle}>★</span>
+          </a>
         </template>
       </div>
     </div>
