@@ -9,7 +9,7 @@ sed -i '' -e 's,"namespace": "","namespace": "parsur",' sfdx-project.json && \
 echo "" && \
 
 echo "Deploying to packaging org..." && \
-sfdx force:source:deploy -p force-app -u $PACKAGING_ORG_ALIAS && \
+sf project deploy start -d force-app -o $PACKAGING_ORG_ALIAS && \
 echo "" && \
 
 echo "Restoring project config..." && \
