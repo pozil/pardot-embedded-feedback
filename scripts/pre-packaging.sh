@@ -12,6 +12,10 @@ echo "Deploying to packaging org..." && \
 sf project deploy start -d force-app -o $PACKAGING_ORG_ALIAS && \
 echo "" && \
 
+echo "Opening packaging org..." && \
+sf org open -p lightning/setup/Package/0335e000000IjUo/view -o $PACKAGING_ORG_ALIAS && \
+echo "" && \
+
 echo "Restoring project config..." && \
 git checkout -- sfdx-project.json
 EXIT_CODE="$?"
