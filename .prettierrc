@@ -1,5 +1,8 @@
 {
   "trailingComma": "none",
+  "plugins": [
+    "@prettier/plugin-xml"
+  ],
   "overrides": [
     {
       "files": "**/lwc/**/*.html",
