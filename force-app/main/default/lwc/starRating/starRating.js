@@ -14,7 +14,10 @@ export default class StarRating extends LightningElement {
     return this._formUrl;
   }
   set formUrl(value) {
-    this._formUrl = (value?.startWith('http://') || value?.startWith('https://')) ? value : `https://${value}`;
+    this._formUrl =
+      value?.startWith("http://") || value?.startWith("https://")
+        ? value
+        : `https://${value}`;
     this.generateStars();
   }
 
